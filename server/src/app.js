@@ -29,31 +29,82 @@ export function createApp() {
   const app = express();
 
   /**
-   * In development the Vite dev server on port 3000 calls the API on port 5000,
-   * which is a cross-origin request. The allow-list is explicit rather than
-   * `origin: true`, so that deploying this does not accidentally accept requests
-   * from any site on the internet.
+   * CORS configuration
+   *
+   * Development:
+   * - http://localhost:3000
+   * - http://localhost:5173
+   *
+   * Production:
+   * - https://edu-path-ai-ten.vercel.app
+   *
+   * CLIENT_ORIGIN can optionally override/extend this list using
+   * comma-separated origins in the environment.
    */
-  const allowedOrigins = (process.env.CLIENT_ORIGIN || 'http://localhost:3000')
-    .split(',')
-    .map((o) => o.trim())
-    .filter(Boolean);
+  const defaultOrigins = [
+    'http://localhost:3000',
+    'http://localhost:5173',
+    'https://edu-path-ai-ten.vercel.app',
+  ];
+
+  const configuredOrigins = process.env.CLIENT_ORIGIN
+    ? process.env.CLIENT_ORIGIN
+        .split(',')
+        .map((origin) => origin.trim())
+        .filter(Boolean)
+    : [];
+
+  const allowedOrigins = [
+    ...new Set([...defaultOrigins, ...configuredOrigins]),
+  ];
 
   app.use(
     cors({
       origin(origin, callback) {
-        // No origin header means a same-origin request, curl, or Postman.
-        if (!origin || allowedOrigins.includes(origin)) return callback(null, true);
-        return callback(new Error(`Origin ${origin} is not allowed by CORS.`));
+        // Requests without an Origin header are allowed.
+        // This includes curl, Postman, server-to-server requests, etc.
+        if (!origin) {
+          return callback(null, true);
+        }
+
+        if (allowedOrigins.includes(origin)) {
+          return callback(null, true);
+        }
+
+        console.warn(`CORS blocked origin: ${origin}`);
+
+        return callback(
+          new Error(`Origin ${origin} is not allowed by CORS.`)
+        );
       },
+
+      credentials: true,
+
+      methods: [
+        'GET',
+        'POST',
+        'PUT',
+        'PATCH',
+        'DELETE',
+        'OPTIONS',
+      ],
+
+      allowedHeaders: [
+        'Content-Type',
+        'Authorization',
+      ],
     })
   );
 
-  // Resume uploads are handled by multer on their own route; this limit applies
-  // to JSON bodies, where the largest realistic payload is a list of known skills.
+  // Resume uploads are handled by multer on their own route.
+  // This limit applies to JSON bodies.
   app.use(express.json({ limit: '1mb' }));
 
-  /** Liveness check — also the quickest way to confirm setup worked. */
+  /**
+   * Liveness check.
+   *
+   * Quick way to confirm that the deployed backend is running.
+   */
   app.get('/api/health', (req, res) => {
     res.json({
       status: 'ok',
@@ -62,6 +113,7 @@ export function createApp() {
     });
   });
 
+  // API routes
   app.use('/api/auth', authRoutes);
   app.use('/api/roles', roleRoutes);
   app.use('/api/nodes', nodeRoutes);
@@ -78,8 +130,7 @@ export function createApp() {
   app.use('/api/tutor', tutorRoutes);
   app.use('/api/interview', interviewRoutes);
 
-  // These two must stay last: Express matches in order, so anything registered
-  // after the 404 handler would never be reached.
+  // Keep these last.
   app.use(notFoundHandler);
   app.use(errorHandler);
 

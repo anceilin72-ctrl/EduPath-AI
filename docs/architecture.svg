@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1049" width="1200" height="1049" font-family="Archivo, 'Segoe UI', system-ui, sans-serif">
+  <title>System architecture</title>
+  <rect width="1200" height="1049" fill="#F1F3F7"/>
+  <text x="40" y="46" font-size="26" font-weight="700" fill="#16223D">System architecture</text>
+  <text x="40" y="70" font-size="14" fill="#6C7791">Career Roadmap Generator — MERN stack, three tiers, one pure engine at the centre</text>
+  <rect x="40" y="100" width="1120" height="168" rx="6" fill="#FFFFFF" stroke="#16223D" stroke-width="1.5"/>
+  <text x="58" y="124" font-size="10.5" fill="#6C7791" font-weight="700" letter-spacing="1.4">PRESENTATION TIER</text>
+  <text x="58" y="148" font-size="17" fill="#16223D" font-weight="700" text-anchor="start">Browser — React 18 · Vite 5 · Tailwind 3</text>
+  <text x="1142" y="148" font-size="12.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">localhost:3000</text>
+  <rect x="58" y="162" width="262" height="90" rx="6" fill="#F1F3F7" stroke="#D6DBE5" stroke-width="1"/>
+  <text x="70" y="181" font-size="12.5" fill="#16223D" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">pages/</text>
+  <text x="70" y="199" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">Landing · About · Auth · 404</text>
+  <text x="70" y="213" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">Setup wizard · Dashboard</text>
+  <text x="70" y="227" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">Careers · CareerDetail · Compare</text>
+  <text x="70" y="241" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">Plans · PlanDetail · Profile · Resume</text>
+  <rect x="332" y="162" width="262" height="90" rx="6" fill="#F1F3F7" stroke="#D6DBE5" stroke-width="1"/>
+  <text x="344" y="181" font-size="12.5" fill="#16223D" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">components/</text>
+  <text x="344" y="199" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">Layout · Stepper · CareerBrief</text>
+  <text x="344" y="213" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">PhaseSpine · PhaseChain · PhaseCard</text>
+  <text x="344" y="227" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">StepRow · SkillPicker · SkillGapPanel</text>
+  <text x="344" y="241" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">ui.jsx — the small shared pieces</text>
+  <rect x="606" y="162" width="262" height="90" rx="6" fill="#F1F3F7" stroke="#D6DBE5" stroke-width="1"/>
+  <text x="618" y="181" font-size="12.5" fill="#16223D" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">context/</text>
+  <text x="618" y="199" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">AuthContext — the signed-in user,</text>
+  <text x="618" y="213" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">token kept in localStorage</text>
+  <rect x="880" y="162" width="262" height="90" rx="6" fill="#F1F3F7" stroke="#D6DBE5" stroke-width="1"/>
+  <text x="892" y="181" font-size="12.5" fill="#16223D" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">lib/</text>
+  <text x="892" y="199" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">api.js — one fetch wrapper</text>
+  <text x="892" y="213" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">format.js — hours, weeks, INR</text>
+  <line x1="600" y1="270" x2="600" y2="328" stroke="#3D4A69" stroke-width="1.6"/>
+  <polygon points="600.0,328.0 595.1,314.7 604.9,314.7" fill="#3D4A69"/>
+  <rect x="616" y="276" width="500" height="46" rx="6" fill="#FBF1DE" stroke="#A9660B" stroke-width="1"/>
+  <text x="630" y="295" font-size="12" fill="#A9660B" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">fetch('/api/…')  →  Vite dev-server proxy  →  :5000</text>
+  <text x="630" y="312" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">No hostname is hard-coded in React, and CORS never bites in development.</text>
+  <rect x="40" y="330" width="1120" height="441" rx="6" fill="#FFFFFF" stroke="#16223D" stroke-width="1.5"/>
+  <text x="58" y="354" font-size="10.5" fill="#6C7791" font-weight="700" letter-spacing="1.4">APPLICATION TIER</text>
+  <text x="58" y="378" font-size="17" fill="#16223D" font-weight="700" text-anchor="start">Express 4 API</text>
+  <text x="1142" y="378" font-size="12.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">localhost:5000</text>
+  <rect x="58" y="396" width="1084" height="58" rx="6" fill="#FFFFFF" stroke="#D6DBE5" stroke-width="1"/>
+  <text x="74" y="419" font-size="13" fill="#16223D" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">middleware/</text>
+  <text x="74" y="438" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">auth.js verifies the JWT  ·  upload.js — multer, 2 MB cap, UUID filenames  ·  errorHandler.js hides internals in production</text>
+  <rect x="58" y="463" width="1084" height="58" rx="6" fill="#FFFFFF" stroke="#D6DBE5" stroke-width="1"/>
+  <text x="74" y="486" font-size="13" fill="#16223D" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">routes/</text>
+  <text x="74" y="505" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">auth · roles · nodes · roadmaps · progress · resume · analysis · dashboard      thin by design: validate with Zod, call a service, respond</text>
+  <rect x="58" y="530" width="1084" height="58" rx="6" fill="#FFFFFF" stroke="#D6DBE5" stroke-width="1"/>
+  <text x="74" y="553" font-size="13" fill="#16223D" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">services/</text>
+  <text x="74" y="572" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">roadmapService · progressService · resumeService · narrative      the only layer that talks to both Mongoose and the engine</text>
+  <rect x="58" y="597" width="1084" height="58" rx="6" fill="#FBF1DE" stroke="#A9660B" stroke-width="2"/>
+  <text x="74" y="620" font-size="13" fill="#A9660B" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">engine/</text>
+  <text x="1126" y="620" font-size="10.5" fill="#A9660B" font-weight="700" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">PURE — NO I/O</text>
+  <text x="74" y="639" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">graph.js — topological sort, depth, transitive expansion  ·  phasePacker.js — grouping and scheduling  ·  generate.js</text>
+  <rect x="58" y="664" width="1084" height="58" rx="6" fill="#FFFFFF" stroke="#D6DBE5" stroke-width="1"/>
+  <text x="74" y="687" font-size="13" fill="#16223D" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">data/</text>
+  <text x="74" y="706" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">188 career steps across 6 domains  ·  30 target roles  ·  validateCatalog() — the gate every entry path calls first</text>
+  <text x="58" y="749" font-size="11" fill="#6C7791" font-weight="400" text-anchor="start">Requests flow down; nothing below reaches back up. The engine imports nothing from routes, services or Mongoose — which is what lets 122 assertions run under bare node, with no</text>
+  <text x="58" y="763" font-size="11" fill="#6C7791" font-weight="400" text-anchor="start">database and no node_modules.</text>
+  <line x1="600" y1="773" x2="600" y2="825" stroke="#3D4A69" stroke-width="1.6"/>
+  <polygon points="600.0,825.0 595.1,811.7 604.9,811.7" fill="#3D4A69"/>
+  <text x="616" y="805" font-size="12" fill="#3D4A69" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">Mongoose 8</text>
+  <rect x="40" y="827" width="1120" height="120" rx="6" fill="#FFFFFF" stroke="#16223D" stroke-width="1.5"/>
+  <text x="58" y="851" font-size="10.5" fill="#6C7791" font-weight="700" letter-spacing="1.4">DATA TIER</text>
+  <text x="58" y="875" font-size="17" fill="#16223D" font-weight="700" text-anchor="start">MongoDB Atlas</text>
+  <text x="1142" y="875" font-size="12.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">M0 free cluster · database: careerRoadmap</text>
+  <rect x="58" y="889" width="209" height="42" rx="6" fill="#E4EBF7" stroke="#2E5AA8" stroke-width="1"/>
+  <text x="68" y="907" font-size="12" fill="#2E5AA8" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">careernodes</text>
+  <text x="68" y="923" font-size="10" fill="#3D4A69" font-weight="400" text-anchor="start">188 steps — the catalog</text>
+  <rect x="277" y="889" width="209" height="42" rx="6" fill="#E4EBF7" stroke="#2E5AA8" stroke-width="1"/>
+  <text x="287" y="907" font-size="12" fill="#2E5AA8" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">roles</text>
+  <text x="287" y="923" font-size="10" fill="#3D4A69" font-weight="400" text-anchor="start">30 target careers</text>
+  <rect x="496" y="889" width="209" height="42" rx="6" fill="#E1F0E9" stroke="#1B6E52" stroke-width="1"/>
+  <text x="506" y="907" font-size="12" fill="#1B6E52" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">users</text>
+  <text x="506" y="923" font-size="10" fill="#3D4A69" font-weight="400" text-anchor="start">credentials + profile</text>
+  <rect x="714" y="889" width="209" height="42" rx="6" fill="#E1F0E9" stroke="#1B6E52" stroke-width="1"/>
+  <text x="724" y="907" font-size="12" fill="#1B6E52" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">roadmaps</text>
+  <text x="724" y="923" font-size="10" fill="#3D4A69" font-weight="400" text-anchor="start">generated plans, snapshotted</text>
+  <rect x="933" y="889" width="209" height="42" rx="6" fill="#E1F0E9" stroke="#1B6E52" stroke-width="1"/>
+  <text x="943" y="907" font-size="12" fill="#1B6E52" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">progress</text>
+  <text x="943" y="923" font-size="10" fill="#3D4A69" font-weight="400" text-anchor="start">one row per step per plan</text>
+  <rect x="40" y="963" width="400" height="46" rx="6" fill="#E4EBF7" stroke="#2E5AA8" stroke-width="1"/>
+  <text x="54" y="983" font-size="11.5" fill="#2E5AA8" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">Seeded — npm run seed</text>
+  <text x="54" y="999" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">Read-only to the app. Safe to re-run at any time; it upserts.</text>
+  <rect x="456" y="963" width="400" height="46" rx="6" fill="#E1F0E9" stroke="#1B6E52" stroke-width="1"/>
+  <text x="470" y="983" font-size="11.5" fill="#1B6E52" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">Written by users</text>
+  <text x="470" y="999" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">Never touched by the seeder, not even with --fresh.</text>
+</svg>

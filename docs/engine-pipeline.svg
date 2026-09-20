@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1220 1053" width="1220" height="1053" font-family="Archivo, 'Segoe UI', system-ui, sans-serif">
+  <title>How one plan is generated</title>
+  <rect width="1220" height="1053" fill="#F1F3F7"/>
+  <text x="40" y="46" font-size="26" font-weight="700" fill="#16223D">How one plan is generated</text>
+  <text x="40" y="70" font-size="14" fill="#6C7791">generateRoadmap({ role, nodes, profile, now }) — seven steps, no I/O, and the same input always gives the same plan</text>
+  <rect x="40" y="100" width="360" height="122" rx="6" fill="#FFFFFF" stroke="#16223D" stroke-width="1.5"/>
+  <text x="56" y="124" font-size="10.5" fill="#6C7791" font-weight="700" letter-spacing="1.4">INPUTS</text>
+  <text x="56" y="148" font-size="12" fill="#16223D" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">role</text>
+  <text x="132" y="148" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">the target career and its requirements</text>
+  <text x="56" y="168" font-size="12" fill="#16223D" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">nodes</text>
+  <text x="132" y="168" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">the whole 188-step catalog</text>
+  <text x="56" y="188" font-size="12" fill="#16223D" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">profile</text>
+  <text x="132" y="188" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">skills + levels · hours per week · target date</text>
+  <text x="56" y="208" font-size="12" fill="#16223D" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">now</text>
+  <text x="132" y="208" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">injected clock, so tests are repeatable</text>
+  <line x1="205" y1="224" x2="205" y2="250" stroke="#3D4A69" stroke-width="1.6"/>
+  <polygon points="205.0,250.0 200.1,236.7 209.9,236.7" fill="#3D4A69"/>
+  <rect x="40" y="256" width="780" height="82" rx="6" fill="#FFFFFF" stroke="#D6DBE5" stroke-width="1"/>
+  <circle cx="66" cy="297" r="14" fill="#16223D"/>
+  <text x="66" y="302" font-size="13" fill="#FFFFFF" font-weight="700" text-anchor="middle" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">1</text>
+  <text x="92" y="278" font-size="13.5" fill="#16223D" font-weight="700" text-anchor="start">Collect requirements</text>
+  <text x="92" y="296" font-size="11" fill="#3D4A69" font-weight="400" text-anchor="start">Walk the role's requiredNodes and their prerequisites, propagating importance downwards.</text>
+  <text x="92" y="313" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="start">core &gt; recommended &gt; optional. Only optional is dropped by default, so in this catalog 'optional' means genuinely not</text>
+  <text x="92" y="328" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="start">needed to get hired.</text>
+  <rect x="40" y="347" width="780" height="82" rx="6" fill="#FFFFFF" stroke="#D6DBE5" stroke-width="1"/>
+  <circle cx="66" cy="388" r="14" fill="#16223D"/>
+  <text x="66" y="392" font-size="13" fill="#FFFFFF" font-weight="700" text-anchor="middle" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">2</text>
+  <text x="92" y="369" font-size="13.5" fill="#16223D" font-weight="700" text-anchor="start">Expand what is already known</text>
+  <text x="92" y="387" font-size="11" fill="#3D4A69" font-weight="400" text-anchor="start">Take the learner's ticked skills and self-rated levels, then close them transitively over prerequisites.</text>
+  <text x="92" y="404" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="start">Knowing React implies knowing the DOM and JavaScript. Usually right, occasionally wrong — which is exactly why step 3</text>
+  <text x="92" y="419" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="start">keeps a reason.</text>
+  <rect x="40" y="438" width="780" height="98" rx="6" fill="#FFFFFF" stroke="#D6DBE5" stroke-width="1"/>
+  <circle cx="66" cy="487" r="14" fill="#16223D"/>
+  <text x="66" y="492" font-size="13" fill="#FFFFFF" font-weight="700" text-anchor="middle" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">3</text>
+  <text x="92" y="460" font-size="13.5" fill="#16223D" font-weight="700" text-anchor="start">Prune the overlap, audibly — and halve the shaky steps</text>
+  <text x="92" y="478" font-size="11" fill="#3D4A69" font-weight="400" text-anchor="start">Remove every required node the learner already has, recording why. A skill rated 'beginner' is kept instead, at half</text>
+  <text x="92" y="494" font-size="11" fill="#3D4A69" font-weight="400" text-anchor="start">its hours, flagged as revision.</text>
+  <text x="92" y="511" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="start">Reasons read 'you marked this known', 'you rated yourself intermediate', or 'assumed known because you already know</text>
+  <text x="92" y="526" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="start">React'. Beginner outranks both a tick and an inference, and a calendar-bound step is never halved.</text>
+  <rect x="40" y="545" width="780" height="82" rx="6" fill="#FFFFFF" stroke="#D6DBE5" stroke-width="1"/>
+  <circle cx="66" cy="586" r="14" fill="#16223D"/>
+  <text x="66" y="590" font-size="13" fill="#FFFFFF" font-weight="700" text-anchor="middle" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">4</text>
+  <text x="92" y="567" font-size="13.5" fill="#16223D" font-weight="700" text-anchor="start">Sort into a workable order</text>
+  <text x="92" y="585" font-size="11" fill="#3D4A69" font-weight="400" text-anchor="start">Kahn's topological sort over the remaining sub-graph.</text>
+  <text x="92" y="602" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="start">Guarantees no step is scheduled before something it depends on. A cycle here would be a catalog bug, and</text>
+  <text x="92" y="617" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="start">validateCatalog() rejects cycles before anything is seeded.</text>
+  <rect x="40" y="636" width="780" height="67" rx="6" fill="#FFFFFF" stroke="#D6DBE5" stroke-width="1"/>
+  <circle cx="66" cy="670" r="14" fill="#16223D"/>
+  <text x="66" y="674" font-size="13" fill="#FFFFFF" font-weight="700" text-anchor="middle" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">5</text>
+  <text x="92" y="658" font-size="13.5" fill="#16223D" font-weight="700" text-anchor="start">Measure prerequisite depth</text>
+  <text x="92" y="676" font-size="11" fill="#3D4A69" font-weight="400" text-anchor="start">Longest path from a root, per node.</text>
+  <text x="92" y="693" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="start">This is what keeps prerequisite order intact when a level has to be split across a phase boundary in step 6.</text>
+  <rect x="40" y="712" width="780" height="82" rx="6" fill="#FBF1DE" stroke="#A9660B" stroke-width="2"/>
+  <circle cx="66" cy="753" r="14" fill="#A9660B"/>
+  <text x="66" y="758" font-size="13" fill="#FFFFFF" font-weight="700" text-anchor="middle" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">6</text>
+  <text x="92" y="734" font-size="13.5" fill="#A9660B" font-weight="700" text-anchor="start">Pack into phases</text>
+  <text x="92" y="752" font-size="11" fill="#3D4A69" font-weight="400" text-anchor="start">Group into phases of three to six content items — and give every calendar-bound step a phase of its own.</text>
+  <text x="92" y="769" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="start">THE FORK. Effort steps are scheduled as hours ÷ hoursPerWeek. Calendar-bound steps are scheduled by their declared</text>
+  <text x="92" y="784" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="start">fixedDurationWeeks and are never divided by availability.</text>
+  <rect x="40" y="803" width="780" height="82" rx="6" fill="#FFFFFF" stroke="#D6DBE5" stroke-width="1"/>
+  <circle cx="66" cy="844" r="14" fill="#16223D"/>
+  <text x="66" y="848" font-size="13" fill="#FFFFFF" font-weight="700" text-anchor="middle" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">7</text>
+  <text x="92" y="825" font-size="13.5" fill="#16223D" font-weight="700" text-anchor="start">Schedule, and check it is possible</text>
+  <text x="92" y="843" font-size="11" fill="#3D4A69" font-weight="400" text-anchor="start">Sum hours and weeks, project a finish date, and compare it with the target date if one was given.</text>
+  <text x="92" y="860" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="start">If the target is unreachable it says so, reports the shortfall in weeks, and states the weekly commitment that would</text>
+  <text x="92" y="875" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="start">close it — rather than quietly returning a plan that cannot happen.</text>
+  <rect x="860" y="256" width="320" height="629" rx="6" fill="#FFFFFF" stroke="#1B6E52" stroke-width="1.5"/>
+  <text x="876" y="280" font-size="10.5" fill="#1B6E52" font-weight="700" letter-spacing="1.4">RETURNS A PLAIN OBJECT</text>
+  <text x="876" y="308" font-size="12" fill="#1B6E52" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">totals</text>
+  <text x="876" y="325" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">hours · weeks · months · steps</text>
+  <text x="876" y="356" font-size="12" fill="#1B6E52" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">readiness</text>
+  <text x="876" y="373" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">met vs remaining, hours saved</text>
+  <text x="876" y="404" font-size="12" fill="#1B6E52" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">schedule</text>
+  <text x="876" y="421" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">finish date · onTrack · shortfall</text>
+  <text x="876" y="452" font-size="12" fill="#1B6E52" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">phases[]</text>
+  <text x="876" y="469" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">each with weeks, and a calendarBound flag</text>
+  <text x="876" y="500" font-size="12" fill="#1B6E52" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">skipped[]</text>
+  <text x="876" y="517" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">a reason for every single removal</text>
+  <text x="876" y="548" font-size="12" fill="#1B6E52" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">notes[]</text>
+  <text x="876" y="565" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">e.g. the minimum education you lack</text>
+  <line x1="876" y1="766" x2="1164" y2="766" stroke="#D6DBE5" stroke-width="1"/>
+  <text x="876" y="790" font-size="11" fill="#16223D" font-weight="700" text-anchor="start">A pure function</text>
+  <text x="876" y="807" font-size="11" fill="#3D4A69" font-weight="400" text-anchor="start">No database, no network, and no clock it was</text>
+  <text x="876" y="822" font-size="11" fill="#3D4A69" font-weight="400" text-anchor="start">not handed. That is what lets 122 assertions</text>
+  <text x="876" y="837" font-size="11" fill="#3D4A69" font-weight="400" text-anchor="start">run under bare node with no install, and it is</text>
+  <text x="876" y="852" font-size="11" fill="#3D4A69" font-weight="400" text-anchor="start">why the same inputs always produce the same</text>
+  <text x="876" y="867" font-size="11" fill="#3D4A69" font-weight="400" text-anchor="start">plan.</text>
+  <rect x="40" y="909" width="780" height="104" rx="6" fill="#F1F3F7" stroke="#6C7791" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="56" y="933" font-size="10.5" fill="#6C7791" font-weight="700" letter-spacing="1.4">REAL OUTPUT — SAME ROLE, TWO LEARNERS</text>
+  <text x="56" y="957" font-size="11.5" fill="#16223D" font-weight="700" text-anchor="start">School leaver, nothing known, 10 h/week</text>
+  <text x="396" y="957" font-size="11.5" fill="#3D4A69" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">19 steps · 730 hours · 75 weeks · 5 phases</text>
+  <text x="56" y="977" font-size="11.5" fill="#16223D" font-weight="700" text-anchor="start">Knows HTML/CSS, JavaScript and React, 20 h/week</text>
+  <text x="396" y="977" font-size="11.5" fill="#1B6E52" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">13 steps · 490 hours · 26 weeks · 3 phases</text>
+  <text x="56" y="1003" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="start">Six steps dropped, but only three of them claimed — the other three were inferred, and the plan says so.</text>
+</svg>

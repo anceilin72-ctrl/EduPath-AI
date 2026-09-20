@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Environment — never commit real credentials
+.env
+.env.local
+.env.production
+server/.env
+client/.env
+
+# Build output
+dist/
+build/
+.vite/
+
+# Uploads (user resumes — do not commit)
+server/uploads/*
+!server/uploads/.gitkeep
+
+# Logs
+*.log
+npm-debug.log*
+logs/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Test coverage
+coverage/

@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Base layer — the page's own voice.
+ *
+ * Dark indigo surface, plain sans body copy at 15px, grotesque headings, mono for
+ * figures. Set here rather than repeated as utilities on every element, so the
+ * typography stays consistent in markup written later.
+ *
+ * The body carries a faint 32px grid, like graph paper seen in low light. It is
+ * the one piece of atmosphere in the app: this is a planning tool, and the grid
+ * says so without a word. Kept far below the contrast floor so it never competes
+ * with text.
+ */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    color-scheme: light;
+  }
+
+  body {
+    @apply bg-paper text-ink font-body antialiased;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-ink;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  ::selection {
+    background: #3B82F6;
+    color: #FFFFFF;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-effort ring-offset-2 ring-offset-paper;
+  }
+
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
+
+@layer components {
+  /* --- surfaces ---------------------------------------------------------- */
+  .card {
+    @apply bg-card border border-rule rounded-xl shadow-sm;
+  }
+
+  .panel {
+    @apply bg-panel border border-rule rounded-lg;
+  }
+
+  .tile {
+    @apply card w-full text-left p-4 transition-all hover:border-effort hover:shadow-md;
+  }
+
+  /* --- buttons ----------------------------------------------------------- */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 font-display font-semibold
+           rounded-lg px-4 py-2 text-sm transition-all disabled:opacity-40
+           disabled:cursor-not-allowed shadow-sm;
+  }
+
+  .btn-primary {
+    @apply btn bg-effort text-white hover:bg-effort-lift hover:shadow;
+  }
+
+  .btn-accent {
+    @apply btn bg-effort text-white hover:bg-effort-lift hover:shadow;
+  }
+
+  .btn-quiet {
+    @apply btn bg-card text-ink border border-rule hover:bg-panel hover:border-ink-faint;
+  }
+
+  .btn-ghost {
+    @apply btn text-ink-soft hover:text-ink hover:bg-panel shadow-none;
+  }
+
+  /* --- forms ------------------------------------------------------------- */
+  .input {
+    @apply w-full bg-card border border-rule rounded-lg px-3 py-2 text-ink
+           placeholder:text-ink-faint focus:border-effort shadow-sm;
+  }
+
+  .label {
+    @apply block font-display text-xs font-semibold uppercase tracking-wider text-ink-soft mb-1.5;
+  }
+
+  /* Segmented control — used for Beginner / Intermediate / Advanced. The selected
+     option gets its colour from the caller, since which colour is correct depends
+     on what is being chosen. */
+  .seg {
+    @apply inline-flex rounded-md border border-rule bg-paper p-0.5 gap-0.5;
+  }
+
+  .seg-btn {
+    @apply rounded px-2.5 py-1 text-xs font-semibold font-display text-ink-faint
+           transition-colors hover:text-ink;
+  }
+
+  /* --- small type -------------------------------------------------------- */
+  /* An eyebrow labels a section without competing with its heading. */
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-widest text-ink-faint;
+  }
+
+  /* Any measured quantity. Tabular figures so columns of numbers line up. */
+  .figure {
+    @apply font-mono tabular-nums;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-rule bg-panel
+           px-2.5 py-0.5 text-xs text-ink-soft;
+  }
+
+  .nav-link {
+    @apply text-sm text-ink-soft transition-colors hover:text-ink;
+  }
+
+  .link {
+    @apply text-fixed underline underline-offset-2 hover:text-ink;
+  }
+
+  /* --- progress ---------------------------------------------------------- */
+  .meter {
+    @apply h-2 w-full overflow-hidden rounded-full bg-panel;
+  }
+
+  .meter-fill {
+    @apply h-full rounded-full transition-all duration-500;
+  }
+}
+
+/**
+ * Respect the system setting. The only motion in the app is a staggered entrance
+ * and a couple of width transitions, but someone who has asked for less should
+ * get none.
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

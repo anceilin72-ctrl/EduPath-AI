@@ -1,0 +1,121 @@
+/**
+ * Education and academia career nodes.
+ */
+
+const domain = 'education';
+
+export const educationNodes = [
+  {
+    key: 'subject-mastery',
+    title: 'Subject Mastery',
+    domain,
+    difficulty: 'intermediate',
+    estimatedHours: 150,
+    prerequisites: [],
+    description:
+      'Command of your teaching subject well beyond the syllabus you will teach — enough to answer the question behind the question.',
+    aliases: ['subject knowledge', 'subject expertise'],
+  },
+  {
+    key: 'bed-degree',
+    title: 'B.Ed Degree',
+    domain,
+    type: 'qualification',
+    difficulty: 'advanced',
+    estimatedHours: 1400,
+    fixedDurationWeeks: 104,
+    prerequisites: [],
+    description:
+      'A two-year NCTE-recognised Bachelor of Education. Required for most school teaching posts in India.',
+    aliases: ['b.ed', 'bed', 'bachelor of education'],
+  },
+  {
+    key: 'teaching-pedagogy',
+    title: 'Pedagogy & Lesson Planning',
+    domain,
+    difficulty: 'intermediate',
+    estimatedHours: 80,
+    prerequisites: ['bed-degree'],
+    description: 'Learning theory, lesson design, differentiation and assessment that informs teaching.',
+    aliases: ['pedagogy', 'lesson planning', 'teaching methods'],
+  },
+  {
+    key: 'classroom-management',
+    title: 'Classroom Management',
+    domain,
+    difficulty: 'intermediate',
+    estimatedHours: 50,
+    prerequisites: ['teaching-pedagogy'],
+    description: 'Routines, behaviour support, inclusive practice and holding a room of forty adolescents.',
+    aliases: ['classroom management', 'behaviour management'],
+  },
+  {
+    key: 'teaching-practicum',
+    title: 'Teaching Practicum',
+    domain,
+    type: 'experience',
+    difficulty: 'advanced',
+    estimatedHours: 300,
+    fixedDurationWeeks: 16,
+    prerequisites: ['teaching-pedagogy'],
+    description: 'Supervised school placement with observed lessons and mentor feedback.',
+    aliases: ['teaching practice', 'practicum', 'internship teaching'],
+  },
+  {
+    key: 'tet-exam',
+    title: 'Teacher Eligibility Test (TET)',
+    domain,
+    type: 'exam',
+    difficulty: 'intermediate',
+    estimatedHours: 120,
+    prerequisites: ['teaching-pedagogy', 'subject-mastery'],
+    description: 'CTET or the relevant state TET, mandatory for most government school teaching posts.',
+    aliases: ['tet', 'ctet', 'teacher eligibility test'],
+  },
+  {
+    key: 'research-methodology',
+    title: 'Research Methodology',
+    domain,
+    difficulty: 'intermediate',
+    estimatedHours: 80,
+    prerequisites: ['subject-mastery'],
+    description: 'Framing research questions, study design, literature review and research ethics.',
+    aliases: ['research methodology', 'research methods'],
+  },
+  {
+    key: 'academic-writing',
+    title: 'Academic Writing & Publishing',
+    domain,
+    difficulty: 'intermediate',
+    estimatedHours: 60,
+    prerequisites: ['research-methodology'],
+    description: 'Paper structure, citation discipline, choosing a legitimate journal and surviving peer review.',
+    aliases: ['academic writing', 'research paper', 'publishing'],
+  },
+  {
+    key: 'ugc-net',
+    title: 'UGC NET / JRF',
+    domain,
+    type: 'exam',
+    difficulty: 'advanced',
+    estimatedHours: 250,
+    prerequisites: ['subject-mastery', 'research-methodology'],
+    description: 'The national eligibility test for assistant professor posts, and for JRF funding.',
+    aliases: ['ugc net', 'net exam', 'jrf', 'csir net'],
+  },
+  {
+    key: 'phd-research',
+    title: 'PhD',
+    domain,
+    type: 'qualification',
+    difficulty: 'advanced',
+    estimatedHours: 4000,
+    fixedDurationWeeks: 208,
+    prerequisites: ['ugc-net', 'academic-writing'],
+    description:
+      'Four or more years of supervised original research ending in a defended thesis. Increasingly expected for permanent academic posts.',
+    aliases: ['phd', 'doctorate', 'doctoral research'],
+  },
+];
+
+export default educationNodes;

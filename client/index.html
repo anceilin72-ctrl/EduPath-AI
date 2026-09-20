@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Career Roadmap Generator</title>
+    <meta
+      name="description"
+      content="Build a step-by-step career roadmap from where you actually are — for any career, technical or not."
+    />
+    <!-- Dark from the first frame: no white flash before the CSS loads. -->
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0A1020" />
+    <style>
+      html {
+        background: #0a1020;
+      }
+    </style>
+
+    <!--
+      Fonts are loaded from Google Fonts. If the machine is offline the stacks in
+      tailwind.config.js fall back to system faces, so the app stays readable.
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

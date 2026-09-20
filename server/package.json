@@ -1,0 +1,47 @@
+{
+  "name": "career-roadmap-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Express + MongoDB backend for the Career Roadmap Generator",
+  "type": "module",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "seed": "node src/seed.js",
+    "data": "node src/inspect.js",
+    "test": "npm run test:engine && npm run test:progress && npm run test:resume && npm run test:evidence && npm run test:gaps && npm run test:assessment && npm run test:adaptive && npm run test:agent && npm run test:phase6 && npm run test:phase9 && npm run test:phase10 && npm run test:phase11 && npm run test:e2e",
+    "test:engine": "node tests/engine.test.mjs",
+    "test:progress": "node tests/progress.test.mjs",
+    "test:resume": "node tests/resume.test.mjs",
+    "test:narrative": "node tests/narrative.test.mjs",
+    "test:evidence": "node tests/evidence.test.mjs",
+    "test:gaps": "node tests/gaps.test.mjs",
+    "test:assessment": "node tests/assessment.test.mjs",
+    "test:adaptive": "node tests/adaptive.test.mjs",
+    "test:agent": "node tests/agent.test.mjs",
+    "test:phase6": "node tests/phase6.test.mjs",
+    "test:phase9": "node tests/phase9.test.mjs",
+    "test:phase10": "node tests/phase10.test.mjs",
+    "test:phase11": "node tests/phase11.test.mjs",
+    "test:e2e": "node tests/e2e_full_loop.test.mjs"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.6.0",
+    "multer": "^1.4.5-lts.1",
+    "pdf-parse": "^1.1.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

@@ -1,0 +1,239 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1420 1391" width="1420" height="1391" font-family="Archivo, 'Segoe UI', system-ui, sans-serif">
+  <title>Entity relationship diagram</title>
+  <rect width="1420" height="1391" fill="#F1F3F7"/>
+  <text x="40" y="46" font-size="26" font-weight="700" fill="#16223D">Entity relationship diagram</text>
+  <text x="40" y="70" font-size="14" fill="#6C7791">Five collections. Two are the seeded catalog, three hold user data. Embedded sub-documents are indented.</text>
+  <rect x="80" y="110" width="340" height="337" rx="6" fill="#FFFFFF" stroke="#2E5AA8" stroke-width="1.5"/>
+  <path d="M 80 116 q 0 -6 6 -6 L 414 110 q 6 0 6 6 L 420 144 L 80 144 Z" fill="#2E5AA8"/>
+  <text x="94" y="133" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">careernodes</text>
+  <text x="94" y="162" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="start">One step towards a career. 188 rows, seeded.</text>
+  <text x="94" y="184" font-size="11.5" fill="#16223D" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">PK _id</text>
+  <text x="406" y="184" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">ObjectId</text>
+  <text x="94" y="203" font-size="11.5" fill="#16223D" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">PK key</text>
+  <text x="406" y="203" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String  unique</text>
+  <text x="94" y="222" font-size="11.5" fill="#16223D" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">title</text>
+  <text x="406" y="222" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String</text>
+  <text x="94" y="241" font-size="11.5" fill="#16223D" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">type</text>
+  <text x="406" y="241" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">skill | exam | certification</text>
+  <text x="406" y="260" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">qualification | experience</text>
+  <text x="94" y="279" font-size="11.5" fill="#16223D" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">domain</text>
+  <text x="406" y="279" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String  indexed</text>
+  <text x="94" y="298" font-size="11.5" fill="#16223D" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">estimatedHours</text>
+  <text x="406" y="298" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">Number</text>
+  <text x="94" y="317" font-size="11.5" fill="#16223D" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">fixedDurationWeeks</text>
+  <text x="406" y="317" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">Number  optional</text>
+  <text x="94" y="336" font-size="11.5" fill="#16223D" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">difficulty</text>
+  <text x="406" y="336" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String</text>
+  <text x="94" y="355" font-size="11.5" fill="#2E5AA8" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">ref prerequisites[]</text>
+  <text x="406" y="355" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">[String] → key</text>
+  <text x="94" y="374" font-size="11.5" fill="#16223D" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">aliases[]</text>
+  <text x="406" y="374" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">[String]</text>
+  <text x="94" y="393" font-size="11.5" fill="#3D4A69" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">resources[]</text>
+  <text x="406" y="393" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">[Resource]</text>
+  <text x="94" y="412" font-size="11.5" fill="#16223D" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">checkpoints[]</text>
+  <text x="406" y="412" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">[String]</text>
+  <text x="94" y="431" font-size="11.5" fill="#16223D" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">projectIdeas[]</text>
+  <text x="406" y="431" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">[String]</text>
+  <rect x="80" y="521" width="340" height="318" rx="6" fill="#FFFFFF" stroke="#2E5AA8" stroke-width="1.5"/>
+  <path d="M 80 527 q 0 -6 6 -6 L 414 521 q 6 0 6 6 L 420 555 L 80 555 Z" fill="#2E5AA8"/>
+  <text x="94" y="544" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">roles</text>
+  <text x="94" y="573" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="start">A target career. 30 rows, seeded.</text>
+  <text x="94" y="595" font-size="11.5" fill="#16223D" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">PK _id</text>
+  <text x="406" y="595" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">ObjectId</text>
+  <text x="94" y="614" font-size="11.5" fill="#16223D" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">PK key</text>
+  <text x="406" y="614" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String  unique</text>
+  <text x="94" y="633" font-size="11.5" fill="#16223D" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">title</text>
+  <text x="406" y="633" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String</text>
+  <text x="94" y="652" font-size="11.5" fill="#16223D" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">domain</text>
+  <text x="406" y="652" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String</text>
+  <text x="94" y="671" font-size="11.5" fill="#3D4A69" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">requiredNodes[]</text>
+  <text x="406" y="671" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">[RequiredNode]</text>
+  <text x="106" y="690" font-size="11.5" fill="#2E5AA8" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">ref nodeKey</text>
+  <text x="406" y="690" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String → key</text>
+  <text x="106" y="709" font-size="11.5" fill="#3D4A69" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">importance</text>
+  <text x="406" y="709" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">core | recommended | optional</text>
+  <text x="106" y="728" font-size="11.5" fill="#3D4A69" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">rationale</text>
+  <text x="406" y="728" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String</text>
+  <text x="94" y="747" font-size="11.5" fill="#16223D" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">minimumEducation</text>
+  <text x="406" y="747" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String</text>
+  <text x="94" y="766" font-size="11.5" fill="#3D4A69" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">salaryINR</text>
+  <text x="406" y="766" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">{ min, max }</text>
+  <text x="94" y="785" font-size="11.5" fill="#16223D" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">demandLevel</text>
+  <text x="406" y="785" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String</text>
+  <text x="94" y="804" font-size="11.5" fill="#16223D" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">aliases[]</text>
+  <text x="406" y="804" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">[String]</text>
+  <text x="94" y="823" font-size="11.5" fill="#16223D" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">typicalEntryPaths[]</text>
+  <text x="406" y="823" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">[String]</text>
+  <rect x="620" y="110" width="350" height="521" rx="6" fill="#FFFFFF" stroke="#1B6E52" stroke-width="1.5"/>
+  <path d="M 620 116 q 0 -6 6 -6 L 964 110 q 6 0 6 6 L 970 144 L 620 144 Z" fill="#1B6E52"/>
+  <text x="634" y="133" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">users</text>
+  <text x="634" y="162" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="start">The account, plus everything the engine needs to know</text>
+  <text x="634" y="175" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="start">about them.</text>
+  <text x="634" y="197" font-size="11.5" fill="#16223D" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">PK _id</text>
+  <text x="956" y="197" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">ObjectId</text>
+  <text x="634" y="216" font-size="11.5" fill="#16223D" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">name</text>
+  <text x="956" y="216" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String</text>
+  <text x="634" y="235" font-size="11.5" fill="#16223D" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">email</text>
+  <text x="956" y="235" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String  unique</text>
+  <text x="634" y="254" font-size="11.5" fill="#16223D" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">passwordHash</text>
+  <text x="956" y="254" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String  select:false</text>
+  <text x="634" y="273" font-size="11.5" fill="#3D4A69" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">profile</text>
+  <text x="956" y="273" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">Profile</text>
+  <text x="646" y="292" font-size="11.5" fill="#3D4A69" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">educationLevel</text>
+  <text x="956" y="292" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String</text>
+  <text x="646" y="311" font-size="11.5" fill="#3D4A69" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">fieldOfStudy</text>
+  <text x="956" y="311" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String</text>
+  <text x="646" y="330" font-size="11.5" fill="#3D4A69" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">currentYear</text>
+  <text x="956" y="330" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String  '3rd-year'</text>
+  <text x="646" y="349" font-size="11.5" fill="#3D4A69" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">currentStatus</text>
+  <text x="956" y="349" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String</text>
+  <text x="646" y="368" font-size="11.5" fill="#3D4A69" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">experienceLevel</text>
+  <text x="956" y="368" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String  default level</text>
+  <text x="646" y="387" font-size="11.5" fill="#2E5AA8" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">ref knownNodeKeys[]</text>
+  <text x="956" y="387" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">[String] → key</text>
+  <text x="646" y="406" font-size="11.5" fill="#2E5AA8" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">ref skillLevels</text>
+  <text x="956" y="406" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">Map  key → level</text>
+  <text x="646" y="425" font-size="11.5" fill="#3D4A69" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">hoursPerDay</text>
+  <text x="956" y="425" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">Number  1..12</text>
+  <text x="646" y="444" font-size="11.5" fill="#3D4A69" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">hoursPerWeek</text>
+  <text x="956" y="444" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">Number  = day × 7</text>
+  <text x="646" y="463" font-size="11.5" fill="#3D4A69" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">targetDate</text>
+  <text x="956" y="463" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">Date  nullable</text>
+  <text x="646" y="482" font-size="11.5" fill="#2E5AA8" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">ref targetRoleKey</text>
+  <text x="956" y="482" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String → key</text>
+  <text x="646" y="501" font-size="11.5" fill="#3D4A69" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">city</text>
+  <text x="956" y="501" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String</text>
+  <text x="646" y="520" font-size="11.5" fill="#3D4A69" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">onboardedAt</text>
+  <text x="956" y="520" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">Date  nullable</text>
+  <text x="634" y="539" font-size="11.5" fill="#3D4A69" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">resume</text>
+  <text x="956" y="539" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">Resume  nullable</text>
+  <text x="646" y="558" font-size="11.5" fill="#3D4A69" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">originalName</text>
+  <text x="956" y="558" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String</text>
+  <text x="646" y="577" font-size="11.5" fill="#3D4A69" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">storedName</text>
+  <text x="956" y="577" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String  uuid</text>
+  <text x="646" y="596" font-size="11.5" fill="#3D4A69" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">uploadedAt</text>
+  <text x="956" y="596" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">Date</text>
+  <text x="646" y="615" font-size="11.5" fill="#2E5AA8" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">ref detectedNodeKeys[]</text>
+  <text x="956" y="615" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">[String] → key</text>
+  <rect x="620" y="687" width="350" height="508" rx="6" fill="#FFFFFF" stroke="#1B6E52" stroke-width="1.5"/>
+  <path d="M 620 693 q 0 -6 6 -6 L 964 687 q 6 0 6 6 L 970 721 L 620 721 Z" fill="#1B6E52"/>
+  <text x="634" y="710" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">roadmaps</text>
+  <text x="634" y="739" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="start">A generated plan, stored as a snapshot.</text>
+  <text x="634" y="761" font-size="11.5" fill="#16223D" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">PK _id</text>
+  <text x="956" y="761" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">ObjectId</text>
+  <text x="634" y="780" font-size="11.5" fill="#1B6E52" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">FK userId</text>
+  <text x="956" y="780" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">ObjectId → users</text>
+  <text x="634" y="799" font-size="11.5" fill="#2E5AA8" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">ref roleKey</text>
+  <text x="956" y="799" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String → roles.key</text>
+  <text x="634" y="818" font-size="11.5" fill="#16223D" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">roleTitle / roleDomain</text>
+  <text x="956" y="818" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String</text>
+  <text x="634" y="837" font-size="11.5" fill="#16223D" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">engineVersion</text>
+  <text x="956" y="837" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String</text>
+  <text x="634" y="856" font-size="11.5" fill="#16223D" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">generatedAt</text>
+  <text x="956" y="856" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">Date</text>
+  <text x="634" y="875" font-size="11.5" fill="#3D4A69" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">input</text>
+  <text x="956" y="875" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">the profile it was built from</text>
+  <text x="634" y="894" font-size="11.5" fill="#3D4A69" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">totals</text>
+  <text x="956" y="894" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">hours · weeks · months · steps</text>
+  <text x="634" y="913" font-size="11.5" fill="#3D4A69" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">readiness</text>
+  <text x="956" y="913" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">met · remaining · percent</text>
+  <text x="634" y="932" font-size="11.5" fill="#3D4A69" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">schedule</text>
+  <text x="956" y="932" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">finish · target · onTrack</text>
+  <text x="634" y="951" font-size="11.5" fill="#3D4A69" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">phases[]</text>
+  <text x="956" y="951" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">[Phase]</text>
+  <text x="646" y="970" font-size="11.5" fill="#3D4A69" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">index / title / focus</text>
+  <text x="956" y="970" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">1-based</text>
+  <text x="646" y="989" font-size="11.5" fill="#3D4A69" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">hours / weeks</text>
+  <text x="956" y="989" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">Number</text>
+  <text x="646" y="1008" font-size="11.5" fill="#3D4A69" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">startWeek / endWeek</text>
+  <text x="956" y="1008" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">Number</text>
+  <text x="646" y="1027" font-size="11.5" fill="#3D4A69" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">calendarBound</text>
+  <text x="956" y="1027" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">Boolean</text>
+  <text x="646" y="1046" font-size="11.5" fill="#3D4A69" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">nodes[]</text>
+  <text x="956" y="1046" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">snapshot of each step</text>
+  <text x="646" y="1065" font-size="11.5" fill="#3D4A69" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">estimatedHours / fullHours</text>
+  <text x="956" y="1065" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">Number</text>
+  <text x="646" y="1084" font-size="11.5" fill="#3D4A69" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">isRevision</text>
+  <text x="956" y="1084" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">Boolean</text>
+  <text x="646" y="1103" font-size="11.5" fill="#3D4A69" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">selfRatedLevel</text>
+  <text x="956" y="1103" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">beginner → half hours</text>
+  <text x="634" y="1122" font-size="11.5" fill="#3D4A69" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">skipped[]</text>
+  <text x="956" y="1122" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">nodeKey + reason</text>
+  <text x="634" y="1141" font-size="11.5" fill="#3D4A69" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">notes[]</text>
+  <text x="956" y="1141" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">type + message</text>
+  <text x="634" y="1160" font-size="11.5" fill="#3D4A69" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">narrative</text>
+  <text x="956" y="1160" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">summary + phaseNotes</text>
+  <text x="634" y="1179" font-size="11.5" fill="#16223D" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">isArchived</text>
+  <text x="956" y="1179" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">Boolean</text>
+  <rect x="1020" y="687" width="350" height="255" rx="6" fill="#FFFFFF" stroke="#1B6E52" stroke-width="1.5"/>
+  <path d="M 1020 693 q 0 -6 6 -6 L 1364 687 q 6 0 6 6 L 1370 721 L 1020 721 Z" fill="#1B6E52"/>
+  <text x="1034" y="710" font-size="14" fill="#FFFFFF" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">progress</text>
+  <text x="1034" y="739" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="start">One row per step of one plan. Unique on (userId,</text>
+  <text x="1034" y="752" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="start">roadmapId, nodeKey).</text>
+  <text x="1034" y="774" font-size="11.5" fill="#16223D" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">PK _id</text>
+  <text x="1356" y="774" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">ObjectId</text>
+  <text x="1034" y="793" font-size="11.5" fill="#1B6E52" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">FK userId</text>
+  <text x="1356" y="793" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">ObjectId → users</text>
+  <text x="1034" y="812" font-size="11.5" fill="#1B6E52" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">FK roadmapId</text>
+  <text x="1356" y="812" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">ObjectId → roadmaps</text>
+  <text x="1034" y="831" font-size="11.5" fill="#16223D" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">nodeKey</text>
+  <text x="1356" y="831" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String</text>
+  <text x="1034" y="850" font-size="11.5" fill="#16223D" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">status</text>
+  <text x="1356" y="850" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">not-started | in-progress</text>
+  <text x="1356" y="869" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">completed | skipped</text>
+  <text x="1034" y="888" font-size="11.5" fill="#16223D" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">hoursLogged</text>
+  <text x="1356" y="888" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">Number</text>
+  <text x="1034" y="907" font-size="11.5" fill="#16223D" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">startedAt / completedAt</text>
+  <text x="1356" y="907" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">Date  nullable</text>
+  <text x="1034" y="926" font-size="11.5" fill="#16223D" font-weight="400" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">notes</text>
+  <text x="1356" y="926" font-size="10.5" fill="#6C7791" font-weight="400" text-anchor="end" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">String</text>
+  <path d="M 120 449 L 120 477 L 36 477 L 36 170 L 78 170" fill="none" stroke="#6C7791" stroke-width="1.4"/>
+  <polygon points="78.0,170.0 64.7,174.9 64.7,165.1" fill="#6C7791"/>
+  <text x="44" y="492" font-size="10" fill="#6C7791" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">prerequisites · self</text>
+  <line x1="250" y1="517" x2="250" y2="453" stroke="#2E5AA8" stroke-width="1.8"/>
+  <polygon points="250.0,453.0 254.9,466.3 245.1,466.3" fill="#2E5AA8"/>
+  <text x="264" y="477" font-size="10.5" fill="#2E5AA8" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">requiredNodes[].nodeKey</text>
+  <text x="264" y="491" font-size="10" fill="#6C7791" font-weight="400" text-anchor="start">many-to-many, by string key</text>
+  <text x="264" y="505" font-size="10" fill="#6C7791" font-weight="400" text-anchor="start">importance travels with the edge</text>
+  <line x1="616" y1="330" x2="426" y2="330" stroke="#1B6E52" stroke-width="1.8" stroke-dasharray="6 4"/>
+  <polygon points="426.0,330.0 439.3,325.1 439.3,334.9" fill="#1B6E52"/>
+  <text x="520" y="308" font-size="10.5" fill="#1B6E52" font-weight="700" text-anchor="middle" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">knownNodeKeys[]</text>
+  <text x="520" y="322" font-size="10.5" fill="#1B6E52" font-weight="700" text-anchor="middle" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">detectedNodeKeys[]</text>
+  <text x="520" y="346" font-size="10" fill="#6C7791" font-weight="400" text-anchor="middle">by key, never by ObjectId</text>
+  <line x1="770" y1="635" x2="770" y2="681" stroke="#1B6E52" stroke-width="1.8"/>
+  <polygon points="770.0,681.0 765.1,667.7 774.9,667.7" fill="#1B6E52"/>
+  <text x="784" y="665" font-size="11" fill="#1B6E52" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">1  ·  N</text>
+  <path d="M 974 591 L 1330 591 L 1330 681" fill="none" stroke="#1B6E52" stroke-width="1.8"/>
+  <polygon points="1330.0,681.0 1325.1,667.7 1334.9,667.7" fill="#1B6E52"/>
+  <text x="1025" y="581" font-size="11" fill="#1B6E52" font-weight="700" text-anchor="middle" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">1 · N</text>
+  <line x1="974" y1="867" x2="1014" y2="867" stroke="#1B6E52" stroke-width="1.8"/>
+  <polygon points="1014.0,867.0 1000.7,871.9 1000.7,862.1" fill="#1B6E52"/>
+  <text x="995" y="857" font-size="11" fill="#1B6E52" font-weight="700" text-anchor="middle" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">1 · N</text>
+  <line x1="616" y1="671" x2="426" y2="671" stroke="#2E5AA8" stroke-width="1.8" stroke-dasharray="6 4"/>
+  <polygon points="426.0,671.0 439.3,666.1 439.3,675.9" fill="#2E5AA8"/>
+  <text x="520" y="661" font-size="10.5" fill="#2E5AA8" font-weight="700" text-anchor="middle" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">roleKey → roles.key</text>
+  <text x="520" y="687" font-size="10" fill="#6C7791" font-weight="400" text-anchor="middle">the plan remembers the slug,</text>
+  <text x="520" y="700" font-size="10" fill="#6C7791" font-weight="400" text-anchor="middle">not a reference to the document</text>
+  <rect x="80" y="1233" width="300" height="118" rx="6" fill="#FFFFFF" stroke="#D6DBE5" stroke-width="1"/>
+  <text x="96" y="1257" font-size="10.5" fill="#6C7791" font-weight="700" letter-spacing="1.4">READING THIS DIAGRAM</text>
+  <text x="96" y="1279" font-size="10.5" fill="#16223D" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">PK</text>
+  <text x="166" y="1279" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">primary key or unique slug</text>
+  <text x="96" y="1297" font-size="10.5" fill="#1B6E52" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">FK</text>
+  <text x="166" y="1297" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">true reference, by ObjectId</text>
+  <text x="96" y="1315" font-size="10.5" fill="#2E5AA8" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">ref</text>
+  <text x="166" y="1315" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">reference by string key</text>
+  <text x="96" y="1333" font-size="10.5" fill="#3D4A69" font-weight="700" text-anchor="start" font-family="'IBM Plex Mono', Consolas, ui-monospace, monospace">indented</text>
+  <text x="166" y="1333" font-size="10.5" fill="#3D4A69" font-weight="400" text-anchor="start">embedded sub-document</text>
+  <rect x="400" y="1233" width="480" height="118" rx="6" fill="#FBF1DE" stroke="#A9660B" stroke-width="1"/>
+  <text x="416" y="1259" font-size="12.5" fill="#A9660B" font-weight="700" text-anchor="start">Why the catalog links by string key, not ObjectId</text>
+  <text x="416" y="1281" font-size="11" fill="#3D4A69" font-weight="400" text-anchor="start">Prerequisites and role requirements are written as slugs — 'javascript',</text>
+  <text x="416" y="1296" font-size="11" fill="#3D4A69" font-weight="400" text-anchor="start">'bsc-nursing'. That keeps the 188-node catalog readable and editable as</text>
+  <text x="416" y="1311" font-size="11" fill="#3D4A69" font-weight="400" text-anchor="start">source files, so a teammate can add a step by hand and review it in a</text>
+  <text x="416" y="1326" font-size="11" fill="#3D4A69" font-weight="400" text-anchor="start">diff. Keys resolve to a Map once at load time, not per query.</text>
+  <rect x="900" y="1233" width="480" height="118" rx="6" fill="#E4EBF7" stroke="#2E5AA8" stroke-width="1"/>
+  <text x="916" y="1259" font-size="12.5" fill="#2E5AA8" font-weight="700" text-anchor="start">Why roadmaps embed a copy of each step</text>
+  <text x="916" y="1281" font-size="11" fill="#3D4A69" font-weight="400" text-anchor="start">phases[].nodes[] duplicates each step's title, hours and resources.</text>
+  <text x="916" y="1296" font-size="11" fill="#3D4A69" font-weight="400" text-anchor="start">Deliberate denormalisation: if the catalog is edited next week, a plan</text>
+  <text x="916" y="1311" font-size="11" fill="#3D4A69" font-weight="400" text-anchor="start">somebody is halfway through does not silently change under them, and</text>
+  <text x="916" y="1326" font-size="11" fill="#3D4A69" font-weight="400" text-anchor="start">engineVersion records which engine built it.</text>
+</svg>
